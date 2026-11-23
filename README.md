@@ -57,7 +57,7 @@ Tools:
 - `Firecrawl` - More sophisticate website crawling.
 - `WikipediaTools` - General background information.
 
-__Note: This agent is only responsible for collecting information, not deciding whether the information is correct, or writing reports.__Note
+**Note: This agent is only responsible for collecting information, not deciding whether the information is correct, or writing reports.**
 
 ## Agent 3: Fact Checker
 
@@ -125,3 +125,48 @@ Tools:
 
 - File writing tool.
 - Python (for PDF generation, charts, etc.).
+
+## Project structure:
+
+```
+research_agent/
+│
+├── src/
+│   └── research_agent/
+│       │
+│       ├── __init__.py
+│       ├── main.py
+│       │
+│       ├── config/
+│       │   ├── agents.yaml
+│       │   └── tasks.yaml
+│       │
+│       ├── crews/
+│       │   ├── __init__.py
+│       │   └── research_crew.py
+│       │
+│       ├── tools/
+│       │   ├── __init__.py
+│       │   ├── search_tool.py
+│       │   └── scraping_tool.py
+│       │
+│       ├── models/
+│       │   ├── __init__.py
+│       │   └── research_models.py
+│       │
+│       └── utils/
+│           ├── __init__.py
+│           └── report_generator.py
+│
+├── knowledge/
+│
+├── reports/
+│
+├── tests/
+│
+├── .env
+├── .gitignore
+├── pyproject.toml
+├── uv.lock
+└── README.md
+```

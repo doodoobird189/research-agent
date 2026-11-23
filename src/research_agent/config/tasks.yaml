@@ -1,0 +1,98 @@
+planning_task:
+  description: >
+    Analyse the following research question:
+
+    {topic}
+
+    Break the question into distinct research objectives.
+    Identify the important subtopics that need investigating.
+
+    Ensure the objectives collectively address the user's
+    original research question.
+
+  expected_output: >
+    A structured research plan containing a list of research
+    objectives and a brief explanation of each objective.
+
+research_task:
+  description: >
+    Conduct research on each objective provided in the research plan.
+
+    Research topic: {topic}
+
+    For each objective:
+    - Find relevant information.
+    - Search for academic papers, industry reports and reputable sources.
+    - Extract important facts, statistics and findings.
+    - Record source URLs and publication dates.
+    - Preserve the distinction between facts and opinions.
+
+    Do not attempt to write a final report or draw broad conclusions.
+
+  expected_output: >
+    Detailed research notes organised by research objective.
+    Include relevant findings, statistics, source URLs and
+    publication dates.
+
+fact_checking_task:
+  description: >
+    Independently verify the claims and findings collected by
+    the researcher.
+
+    Research topic: {topic}
+
+    Identify:
+    - Unsupported claims.
+    - Contradictory information.
+    - Outdated statistics.
+    - Potentially unreliable sources.
+    - Claims that require additional verification.
+
+    Cross-reference important claims against independent sources.
+
+  expected_output: >
+    A verification report containing the original claims,
+    verification results, supporting evidence, source URLs
+    and confidence assessments.
+
+analysis_task:
+  description: >
+    Analyse the verified research findings about {topic}.
+
+    Identify:
+    - Important trends and patterns.
+    - Comparisons between companies and technologies.
+    - Opportunities and challenges.
+    - Emerging developments.
+    - Research gaps and unanswered questions.
+
+    Clearly distinguish evidence-based conclusions from
+    your own interpretations.
+
+  expected_output: >
+    A detailed analytical report containing key findings,
+    comparisons, opportunities, challenges and conclusions.
+
+report_writing_task:
+  description: >
+    Write a comprehensive Markdown research report on {topic}.
+
+    Use the research notes, verification report and analytical
+    findings provided by the previous agents.
+
+    Include:
+    - Executive summary.
+    - Introduction and research scope.
+    - Main research findings.
+    - Company and technology comparisons.
+    - Industry trends.
+    - Future opportunities and challenges.
+    - Conclusion.
+    - References with source URLs.
+
+    Do not introduce unsupported claims. Ensure that factual
+    statements are traceable to their original sources.
+
+  expected_output: >
+    A comprehensive, professionally structured Markdown
+    research report with references and source URLs.
