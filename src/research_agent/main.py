@@ -14,7 +14,9 @@ def main() -> None:
         "report on future opportunities."
     )
 
-    result = ResearchCrew().crew().kickoff(inputs={"topic": topic})
+    test_topic = "What is Retrieval Augmented Generation and who are the main vendors"
+
+    result = ResearchCrew().crew().kickoff(inputs={"topic": test_topic})
 
     if not isinstance(result, CrewOutput):
         raise TypeError("Expected CrewOutput; is streaming enabled on the crew?")
