@@ -1,3 +1,5 @@
+# pyright: reportAssignmentType=false, reportCallIssue=false, reportAttributeAccessIssue=false
+
 from typing import Any
 
 from crewai import Agent, Crew, Process, Task

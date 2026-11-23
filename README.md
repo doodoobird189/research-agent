@@ -1,172 +1,196 @@
-# Multi-Agent Research System
+<div align="center">
 
-Imagine a user asks:
-"Research the current state of humanoid robotics, identifythe leading companies, analyse the technologies they're developing, and produce a report on future opportunities."
+# Research Agent
 
-There will be 5 agents working together.
+**A multi-agent research pipeline that plans, researches, fact-checks and writes cited reports.**
 
-## Agent 1: Reserach Planner
+Ask a research question and get back a structured Markdown report. Every claim
+in it has been checked against independent sources and traced back to a URL.
 
-**Role:** Reserach Strategist
+![Python](https://img.shields.io/badge/python-3.14-3776AB?logo=python&logoColor=white)
+![CrewAI](https://img.shields.io/badge/CrewAI-multi--agent-FF5A50)
+![Pydantic](https://img.shields.io/badge/Pydantic-structured%20outputs-E92063?logo=pydantic&logoColor=white)
+![uv](https://img.shields.io/badge/uv-package%20manager-DE5FE9)
+![Ruff](https://img.shields.io/badge/code%20style-ruff-D7FF64?logo=ruff&logoColor=black)
 
-Before anyone starts researching, this agent breaks the user's question into smaller research objectives.
+[How it works](#how-it-works) · [Design decisions](#design-decisions) · [Quickstart](#quickstart) · [Example output](#example-output) · [Roadmap](#roadmap)
 
-Responsibilities:
+</div>
 
-- Understand the research question
-- Identify important subtopics
-- Determine what information needs to be collected
-- Delegate research objectives to the reseacher
+---
 
-Tools:
+## Highlights
 
-- LLM (no external tools necessarily).
+- **Four specialised agents** in a sequential pipeline: planner → researcher → fact checker → writer.
+- **Typed handoffs between agents.** Each stage outputs a validated Pydantic model rather than free text, so sources, dates and quotes don't get lost along the way.
+- **Claim-level fact-checking.** Every finding gets an ID (`F1`, `F2`, …). The fact checker gives each ID one of five verdicts and cites its own independent sources.
+- **Clear rules for using verdicts.** The writer bases the report on supported claims, applies corrections, drops contradicted claims and labels unverifiable ones.
+- **Citations throughout.** Every finding keeps its `source_url` from search all the way to the final report.
 
-Example output:
+---
 
-```json
-{
-  "research_topics": [
-    "Leading humanoid robotics companies",
-    "Current robotics hardware",
-    "AI models used in robotics",
-    "Commercial applications",
-    "Future market opportunities"
-  ]
-}
+## How it works
+
+```mermaid
+flowchart LR
+    Q([Research question]) --> P
+
+    P["Research Planner<br/><sub>ResearchPlan</sub>"]
+    R["Researcher<br/><sub>ResearchFindings</sub>"]
+    F["Fact Checker<br/><sub>FactCheckReport</sub>"]
+    W["Report Writer<br/><sub>report.md</sub>"]
+
+    P -->|objectives| R
+    R -->|findings F1…Fn| F
+    R -->|findings| W
+    F -->|verdicts by ID| W
+
+    S[(Serper search<br/>+ web scraping)] -.-> R
+    S -.-> F
 ```
 
-## Agent 2: Researcher
+| Agent | What it does | Tools | Output |
+|---|---|---|---|
+| **Research Planner** | Breaks the question into distinct, searchable objectives | — | `ResearchPlan` |
+| **Researcher** | Collects evidence for each objective, one fact per finding, with source, quote and date | Serper search, web scraper | `ResearchFindings` |
+| **Fact Checker** | Checks every finding against *independent* sources and flags contradictions between findings | Serper search, web scraper | `FactCheckReport` |
+| **Report Writer** | Turns the verified findings into a cited Markdown report | — | `report.md` |
 
-**Role:** Internet Research Specialist
+### The data contracts
 
-This is the primary researcher.
+Each finding is recorded as an individual claim with its source:
 
-Responsibilities:
+```python
+class Finding(BaseModel):
+    id: str                    # "F1", "F2", ...
+    claim: str                 # the specific statement
+    objective: str             # which research objective it answers
+    details: str               # full context, nuance and caveats
+    quote: str | None          # verbatim excerpt from the source
+    source_url: str
+    source_title: str | None
+    published_date: str | None
+```
 
-- Search the internet for relevant information.
-- Find articles, reports, research papers and documentation.
-- Extract relevant information.
-- Collect URLs and publication dates.
-- Return structured research findings.
+The fact checker returns verdicts that **reference findings by ID**:
 
-Tools:
+```python
+class Verdict(str, Enum):
+    SUPPORTED = "supported"
+    PARTIALLY_SUPPORTED = "partially_supported"
+    CONTRADICTED = "contradicted"
+    OUTDATED = "outdated"
+    UNVERIFIABLE = "unverifiable"
 
-- `SerperDevTool` - Google search results.
-- `ScrapeWebsiteTool` - Extract website content.
-- `Firecrawl` - More sophisticate website crawling.
-- `WikipediaTools` - General background information.
+class FindingCheck(BaseModel):
+    finding_id: str
+    verdict: Verdict
+    confidence: float          # 0–1
+    reasoning: str
+    evidence_urls: list[str]   # independent sources consulted
+    correction: str | None     # corrected statement where applicable
+```
 
-**Note: This agent is only responsible for collecting information, not deciding whether the information is correct, or writing reports.**
+---
 
-## Agent 3: Fact Checker
+## Design decisions
 
-**Role:** Research Verification Specialist
+**Structured outputs instead of prose handoffs.**
+When agents pass prose to each other, each LLM rewrites and compresses what it receives. Exact figures, dates and URLs tend to disappear first. A schema acts as a contract: `source_url` is required, so it can't be dropped. Free-text fields (`details`, `quote`, `notes`) keep the nuance without making the schema rigid.
 
-This agent verifies the information gathered by the Researcher agent.
+**The fact checker references findings instead of repeating them.**
+If the fact checker copied each finding into its output, the LLM would rewrite the findings on the way through. Quotes would get paraphrased and URLs mistyped. Outputting only verdicts keyed by `finding_id` leaves the original evidence untouched. The writer matches verdicts to findings by ID.
 
-Responsibilities:
+**Verdicts are an enum, not free text.**
+A free-text verdict comes back as "mostly true", "likely accurate" and so on, which code can't filter on. A fixed set of five verdicts lets the writer, and later the evaluation code, branch on them reliably.
 
-- Verify claims made by the researcher.
-- Cross-reference information against independent sources.
-- Identify contradictory information.
-- Flag outdated statistics.
-- Distinguish factual claims from speculation.
-- Assign confidence levels to findings.
+**I dropped the planned Analyst agent.**
+The original design had a fifth agent that would analyse the findings with Python. In practice, findings from articles are mostly qualitative, so the analyst ended up re-summarising the same text the writer already summarises. Instead of keeping an agent that added cost without adding value, I removed it. Quantitative analysis is still possible later, for topics that produce numeric data.
 
-Tools:
+---
 
-- `SerperDevTool` - Search for independent corroboration.
-- `ScrapeWebsiteTool` - Inspect original sources.
+## Quickstart
 
-For example, the researcher agent might report:
+**Prerequisites:** Python 3.14+, [uv](https://docs.astral.sh/uv/), an [OpenAI API key](https://platform.openai.com/api-keys) and a [Serper API key](https://serper.dev/).
 
-_"Tesla plans to produce one million Optimus robots annually by 2030."_
+```bash
+# 1. Clone and install
+git clone https://github.com/doodoobird189/research-agent.git
+cd research-agent
+uv sync
 
-The fact checker agent investigates whether this is an actual commitment, an executive prediction or simply speculation reported by media outlets.
+# 2. Add your API keys
+cp .env.example .env
+# then edit .env:
+#   OPENAI_API_KEY=...
+#   SERPER_API_KEY=...
+#   OPENAI_MODEL_NAME=gpt-4o-mini
 
-## Agent 4: Analyst
+# 3. Run
+uv run research-agent
+```
 
-**Role:** Research Analyst
+The report is written to `report.md` in the current directory.
 
-This agent interprets the researcher's findings (after it has been fact checked).
+To research a different question, change the topic in [`src/research_agent/main.py`](src/research_agent/main.py).
 
-Responsibilities:
+> **Note:** each run makes many LLM calls and web searches. Start with a narrow question to keep cost and runtime down.
 
-- Identify patterns and trends.
-- Compare competing companies and technologies.
-- Identify opportunities and challenges.
-- Draw conclusions from the collected information.
-- Identify gaps in the available research.
+---
 
-Tools:
+## Example output
 
-- LLM.
-- Python execution tool (maybe?).
-- Calculator.
-- Possible access to structured datasets.
+> **Question:** *"What is Retrieval Augmented Generation and who are the main vendors?"*
 
-For example, it might identify that humanoid robotics companies are increasingly focusing on warehouse automation because it offers a more controlled environment than domestic applications.
+Excerpt from the generated report ([full report](report.md)):
 
-## Agent 5: Report Writer
+> **Key Vendors in RAG Technologies**
+>
+> 1. **Primary Vendors**: Key vendors in the RAG market include OpenAI, Microsoft, Google, and Amazon Web Services (AWS). Additional players identified are NVIDIA and emerging companies in the AI landscape (F7, [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/retrieval-augmented-generation-market)).
+>
+> **Market Trends and Future Directions**
+>
+> 1. **Market Growth**: The RAG market is anticipated to experience significant growth, projected to reach USD 10.2 billion by 2030 […] (F9, [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/retrieval-augmented-generation-market)).
 
-**Role:** Technical Research Writer
+Each statement carries its finding ID and source link, so you can trace it back through the fact-check report to the original evidence.
 
-Responsibilities:
+---
 
-- Take the verified research and analyst findings.
-- Organise the information into logical sections
-- Produce an executive summary.
-- Write a comprehensive report.
-- Include citations and references.
-- Generate a final Markdown document or PDF.
-
-Tools:
-
-- File writing tool.
-- Python (for PDF generation, charts, etc.).
-
-## Project structure:
+## Project structure
 
 ```
-research_agent/
-│
-├── src/
-│   └── research_agent/
-│       │
-│       ├── __init__.py
-│       ├── main.py
-│       │
-│       ├── config/
-│       │   ├── agents.yaml
-│       │   └── tasks.yaml
-│       │
-│       ├── crews/
-│       │   ├── __init__.py
-│       │   └── research_crew.py
-│       │
-│       ├── tools/
-│       │   ├── __init__.py
-│       │   ├── search_tool.py
-│       │   └── scraping_tool.py
-│       │
-│       ├── models/
-│       │   ├── __init__.py
-│       │   └── research_models.py
-│       │
-│       └── utils/
-│           ├── __init__.py
-│           └── report_generator.py
-│
-├── knowledge/
-│
-├── reports/
-│
-├── tests/
-│
-├── .env
-├── .gitignore
+research-agent/
+├── src/research_agent/
+│   ├── main.py                     # entry point (`uv run research-agent`)
+│   ├── config/
+│   │   ├── agents.yaml             # roles, goals, backstories
+│   │   └── tasks.yaml              # task instructions and expected outputs
+│   ├── crews/
+│   │   └── research_crew.py        # wires agents, tasks and output models
+│   ├── models/
+│   │   ├── research_models.py      # ResearchPlan, Finding, ResearchFindings
+│   │   └── fact_checker_models.py  # Verdict, FindingCheck, FactCheckReport
+│   └── tools/
+│       ├── search_tool.py          # Serper (Google search)
+│       └── scraping_tool.py        # website scraping
+├── .env.example
 ├── pyproject.toml
-├── uv.lock
-└── README.md
+└── uv.lock
 ```
+
+---
+
+## Roadmap
+
+- [ ] **Evaluation suite:** plant false claims and measure how many the fact checker catches; automatically check that cited quotes really appear at their URLs.
+- [ ] **Parallel research per objective:** use a CrewAI Flow to start one research task per planned objective, rather than one task covering all of them.
+- [ ] **Validation in code:** confirm that every `finding_id` in the fact-check report exists, and treat any unchecked finding as unverified.
+- [ ] **Cost and latency tracking:** report tokens, dollars and duration per run.
+- [ ] **CLI arguments:** pass the research question on the command line and choose the output path.
+- [ ] **Tests** for the models and pipeline wiring.
+
+---
+
+## Tech stack
+
+[CrewAI](https://github.com/crewAIInc/crewAI) · [Pydantic](https://docs.pydantic.dev/) · [Serper](https://serper.dev/) · OpenAI · [uv](https://docs.astral.sh/uv/) · [Ruff](https://docs.astral.sh/ruff/)
