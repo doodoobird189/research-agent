@@ -4,95 +4,108 @@ planning_task:
 
     {topic}
 
-    Break the question into distinct research objectives.
-    Identify the important subtopics that need investigating.
+    Break the question into distinct, non-overlapping research objectives.
+    Each objective should be specific enough that a researcher can search
+    for it directly.
 
-    Ensure the objectives collectively address the user's
-    original research question.
+    Ensure the objectives collectively address the user's original research
+    question.
 
   expected_output: >
-    A structured research plan containing a list of research
-    objectives and a brief explanation of each objective.
+    A JSON object containing a list of research objectives under the key
+    "research_topics".
 
 research_task:
   description: >
-    Conduct research on each objective provided in the research plan.
+    Conduct internet research on every objective in the research plan.
 
     Research topic: {topic}
 
     For each objective:
-    - Find relevant information.
-    - Search for academic papers, industry reports and reputable sources.
-    - Extract important facts, statistics and findings.
-    - Record source URLs and publication dates.
+    - Search for academic papers, industry reports, official websites and
+      reputable publications.
+    - Record each distinct fact, statistic or statement as a separate finding.
+    - For every finding, record the source URL, and the source title and
+      publication date where available.
+    - Where possible, include a verbatim quote from the source that supports
+      the finding.
+    - Put full context, nuance and caveats in the finding's details rather
+      than leaving them out.
     - Preserve the distinction between facts and opinions.
 
-    Do not attempt to write a final report or draw broad conclusions.
+    Give every finding a unique ID in the form F1, F2, F3, ... numbered
+    consecutively across all objectives. Never reuse an ID.
+
+    Put anything relevant that does not fit a finding in the notes.
+
+    Collect evidence only. Do not verify claims, write a report or draw
+    broad conclusions.
 
   expected_output: >
-    Detailed research notes organised by research objective.
-    Include relevant findings, statistics, source URLs and
-    publication dates.
+    Structured research findings covering every objective in the research
+    plan. Each finding has a unique ID, a specific claim, supporting details
+    and a source URL.
 
 fact_checking_task:
   description: >
-    Independently verify the claims and findings collected by
-    the researcher.
+    Independently verify every finding collected by the researcher.
 
     Research topic: {topic}
 
-    Identify:
-    - Unsupported claims.
-    - Contradictory information.
-    - Outdated statistics.
-    - Potentially unreliable sources.
-    - Claims that require additional verification.
+    For each finding:
+    - Refer to it by its finding ID only. Do not restate or rewrite the
+      finding itself.
+    - Cross-reference the claim against independent sources, not just the
+      original source URL.
+    - Assign exactly one verdict:
+        supported - confirmed by independent sources.
+        partially_supported - broadly right, but a detail is wrong.
+        contradicted - other reliable sources disagree.
+        outdated - was true, but has been superseded.
+        unverifiable - could not be confirmed or refuted.
+    - Give a confidence score between 0 and 1 and explain your reasoning.
+    - List the independent source URLs you used as evidence.
+    - If the verdict is partially_supported, contradicted or outdated,
+      provide a corrected statement where possible.
 
-    Cross-reference important claims against independent sources.
+    Also identify findings that conflict with each other, listing the IDs
+    involved and describing the conflict.
 
-  expected_output: >
-    A verification report containing the original claims,
-    verification results, supporting evidence, source URLs
-    and confidence assessments.
-
-analysis_task:
-  description: >
-    Analyse the verified research findings about {topic}.
-
-    Identify:
-    - Important trends and patterns.
-    - Comparisons between companies and technologies.
-    - Opportunities and challenges.
-    - Emerging developments.
-    - Research gaps and unanswered questions.
-
-    Clearly distinguish evidence-based conclusions from
-    your own interpretations.
+    Check every finding. Do not skip any finding ID.
 
   expected_output: >
-    A detailed analytical report containing key findings,
-    comparisons, opportunities, challenges and conclusions.
+    A structured fact-check report with one check per finding ID, a list of
+    contradictions between findings, and any additional notes about source
+    reliability.
 
 report_writing_task:
   description: >
     Write a comprehensive Markdown research report on {topic}.
 
-    Use the research notes, verification report and analytical
-    findings provided by the previous agents.
+    Use the research findings and the fact-check report from the previous
+    tasks. Match each fact-check verdict to its finding using the finding ID.
+
+    Apply these rules:
+    - Use supported findings as the basis of the report.
+    - For partially_supported or outdated findings, use the corrected
+      statement from the fact-check report.
+    - Exclude contradicted findings unless a correction is available.
+    - Include unverifiable findings only if they are important, and clearly
+      mark them as unverified.
+    - Where findings conflict, present both sides and note the conflict.
 
     Include:
     - Executive summary.
     - Introduction and research scope.
-    - Main research findings.
-    - Company and technology comparisons.
-    - Industry trends.
-    - Future opportunities and challenges.
+    - Main findings, organised by research objective.
+    - Key themes and comparisons across findings.
+    - Open questions and limitations of the research.
     - Conclusion.
-    - References with source URLs.
+    - References listing every cited source URL.
 
-    Do not introduce unsupported claims. Ensure that factual
-    statements are traceable to their original sources.
+    Do not introduce claims that are not in the findings. Every factual
+    statement must be traceable to a cited source.
 
   expected_output: >
-    A comprehensive, professionally structured Markdown
-    research report with references and source URLs.
+    A comprehensive, professionally structured Markdown research report
+    with inline citations and a references section with source URLs.

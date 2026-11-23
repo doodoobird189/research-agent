@@ -6,6 +6,7 @@ dependencies = [
     "crewai>=1.15.44",
     "crewai-tools>=1.15.44",
     "dotenv>=0.9.9",
+    "pydantic>=2.12.5",
 ]
 
 [dependency-groups]
@@ -13,3 +14,10 @@ dev = [
     "pytest>=9.2.0",
     "ruff>=0.17.6",
 ]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+research-agent = "research_agent.main:main"

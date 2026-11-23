@@ -2394,11 +2394,12 @@ wheels = [
 [[package]]
 name = "research-agent"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "crewai" },
     { name = "crewai-tools" },
     { name = "dotenv" },
+    { name = "pydantic" },
 ]
 
 [package.dev-dependencies]
@@ -2412,6 +2413,7 @@ requires-dist = [
     { name = "crewai", specifier = ">=1.15.44" },
     { name = "crewai-tools", specifier = ">=1.15.44" },
     { name = "dotenv", specifier = ">=0.9.9" },
+    { name = "pydantic", specifier = ">=2.12.5" },
 ]
 
 [package.metadata.requires-dev]
