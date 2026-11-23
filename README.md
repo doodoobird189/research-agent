@@ -127,12 +127,33 @@ cp .env.example .env
 #   OPENAI_MODEL_NAME=gpt-4o-mini
 
 # 3. Run
-uv run research-agent
+uv run research-agent "What is Retrieval Augmented Generation and who are the main vendors?"
 ```
 
-The report is written to `report.md` in the current directory.
+### Usage
 
-To research a different question, change the topic in [`src/research_agent/main.py`](src/research_agent/main.py).
+```text
+research-agent [OPTIONS] TOPIC
+
+Arguments:
+  TOPIC                  The research question to investigate  [required]
+
+Options:
+  -d, --output-dir PATH  Parent folder for auto-named run folders  [default: reports]
+  -o, --output PATH      Exact folder for this run, instead of an auto-generated name
+  --help                 Show this message and exit
+```
+
+Each run gets its own folder, named with a timestamp and a short version of the question:
+
+```
+reports/2026-11-23_1432_what-is-retrieval-augmented-generation-and-who/
+├── report.md         # the final cited report
+├── findings.json     # every finding from the researcher (ResearchFindings)
+└── fact_check.json   # every verdict from the fact checker (FactCheckReport)
+```
+
+The timestamp keeps runs in order, and running the same question twice never overwrites an earlier run. Keeping the structured findings and verdicts next to the report lets you trace any statement back to its evidence, and gives future evaluations data to work with.
 
 > **Note:** each run makes many LLM calls and web searches. Start with a narrow question to keep cost and runtime down.
 
@@ -142,7 +163,7 @@ To research a different question, change the topic in [`src/research_agent/main.
 
 > **Question:** *"What is Retrieval Augmented Generation and who are the main vendors?"*
 
-Excerpt from the generated report ([full report](report.md)):
+Excerpt from the generated report ([full report](examples/rag_report.md)):
 
 > **Key Vendors in RAG Technologies**
 >
@@ -161,7 +182,7 @@ Each statement carries its finding ID and source link, so you can trace it back 
 ```
 research-agent/
 ├── src/research_agent/
-│   ├── main.py                     # entry point (`uv run research-agent`)
+│   ├── main.py                     # Typer CLI (`uv run research-agent "question"`)
 │   ├── config/
 │   │   ├── agents.yaml             # roles, goals, backstories
 │   │   └── tasks.yaml              # task instructions and expected outputs
@@ -173,6 +194,8 @@ research-agent/
 │   └── tools/
 │       ├── search_tool.py          # Serper (Google search)
 │       └── scraping_tool.py        # website scraping
+├── examples/
+│   └── rag_report.md               # sample output
 ├── .env.example
 ├── pyproject.toml
 └── uv.lock
@@ -184,13 +207,13 @@ research-agent/
 
 - [ ] **Evaluation suite:** plant false claims and measure how many the fact checker catches; automatically check that cited quotes really appear at their URLs.
 - [ ] **Parallel research per objective:** use a CrewAI Flow to start one research task per planned objective, rather than one task covering all of them.
+- [x] **Command-line interface** with one output folder per run.
 - [ ] **Validation in code:** confirm that every `finding_id` in the fact-check report exists, and treat any unchecked finding as unverified.
 - [ ] **Cost and latency tracking:** report tokens, dollars and duration per run.
-- [ ] **CLI arguments:** pass the research question on the command line and choose the output path.
 - [ ] **Tests** for the models and pipeline wiring.
 
 ---
 
 ## Tech stack
 
-[CrewAI](https://github.com/crewAIInc/crewAI) · [Pydantic](https://docs.pydantic.dev/) · [Serper](https://serper.dev/) · OpenAI · [uv](https://docs.astral.sh/uv/) · [Ruff](https://docs.astral.sh/ruff/)
+[CrewAI](https://github.com/crewAIInc/crewAI) · [Pydantic](https://docs.pydantic.dev/) · [Serper](https://serper.dev/) · OpenAI · [Typer](https://typer.tiangolo.com/) · [uv](https://docs.astral.sh/uv/) · [Ruff](https://docs.astral.sh/ruff/)

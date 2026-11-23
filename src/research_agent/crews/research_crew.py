@@ -70,7 +70,6 @@ class ResearchCrew:
         return Task(
             config=self.tasks_config["report_writing_task"],
             agent=self.report_writer(),
-            output_file="report.md",
         )
 
     @crew

@@ -2400,6 +2400,7 @@ dependencies = [
     { name = "crewai-tools" },
     { name = "dotenv" },
     { name = "pydantic" },
+    { name = "typer" },
 ]
 
 [package.dev-dependencies]
@@ -2414,6 +2415,7 @@ requires-dist = [
     { name = "crewai-tools", specifier = ">=1.15.44" },
     { name = "dotenv", specifier = ">=0.9.9" },
     { name = "pydantic", specifier = ">=2.12.5" },
+    { name = "typer", specifier = ">=0.29.2" },
 ]
 
 [package.metadata.requires-dev]
