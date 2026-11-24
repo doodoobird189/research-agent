@@ -4,12 +4,13 @@ planning_task:
 
     {topic}
 
-    Break the question into distinct, non-overlapping research objectives.
-    Each objective should be specific enough that a researcher can search
-    for it directly.
+    Break the question into 3 to 5 distinct, non-overlapping research
+    objectives. Each objective should be specific enough that a researcher
+    can search for it directly.
 
-    Ensure the objectives collectively address the user's original research
-    question.
+    Make sure every part of the question is covered by at least one
+    objective. If the question asks several things (for example "who leads"
+    and "how realistic are their timelines"), each part needs an objective.
 
   expected_output: >
     A JSON object containing a list of research objectives under the key
@@ -17,24 +18,31 @@ planning_task:
 
 research_task:
   description: >
-    Conduct internet research on every objective in the research plan.
+    Research one objective that is part of a larger research question.
 
-    Research topic: {topic}
+    Overall research question: {topic}
 
-    For each objective:
+    Your objective: {objective}
+
+    Focus only on your objective. Other researchers are covering the other
+    parts of the question.
+
     - Search for academic papers, industry reports, official websites and
       reputable publications.
+    - Collect at least 3 findings, from at least 2 different websites.
     - Record each distinct fact, statistic or statement as a separate finding.
     - For every finding, record the source URL, and the source title and
       publication date where available.
+    - Only use URLs that the search or scraping tools actually returned.
+      Never write, guess or reconstruct a URL yourself.
     - Where possible, include a verbatim quote from the source that supports
       the finding.
     - Put full context, nuance and caveats in the finding's details rather
       than leaving them out.
     - Preserve the distinction between facts and opinions.
 
-    Give every finding a unique ID in the form F1, F2, F3, ... numbered
-    consecutively across all objectives. Never reuse an ID.
+    Leave the id and objective fields empty; they are filled in
+    automatically.
 
     Put anything relevant that does not fit a finding in the notes.
 
@@ -42,9 +50,8 @@ research_task:
     broad conclusions.
 
   expected_output: >
-    Structured research findings covering every objective in the research
-    plan. Each finding has a unique ID, a specific claim, supporting details
-    and a source URL.
+    Structured research findings for your objective, each with a specific
+    claim, supporting details and a real source URL.
 
 fact_checking_task:
   description: >
@@ -68,8 +75,15 @@ fact_checking_task:
     - If the verdict is partially_supported, contradicted or outdated,
       provide a corrected statement where possible.
 
+    Findings to check:
+
+    {findings}
+
     Also identify findings that conflict with each other, listing the IDs
-    involved and describing the conflict.
+    involved and describing the conflict. Only report a contradiction when
+    two findings make incompatible claims about the same thing (for example,
+    two different figures for the same metric). Findings about different
+    subjects are not contradictions.
 
     Check every finding. Do not skip any finding ID.
 
@@ -82,17 +96,35 @@ report_writing_task:
   description: >
     Write a comprehensive Markdown research report on {topic}.
 
-    Use the research findings and the fact-check report from the previous
-    tasks. Match each fact-check verdict to its finding using the finding ID.
+    Match each fact-check verdict to its finding using the finding ID.
+
+    Research findings:
+
+    {findings}
+
+    Fact-check report:
+
+    {fact_check}
 
     Apply these rules:
     - Use supported findings as the basis of the report.
-    - For partially_supported or outdated findings, use the corrected
-      statement from the fact-check report.
+    - For partially_supported or outdated findings, state the corrected
+      statement from the fact-check report instead of the original claim.
+      Never repeat the original figures or wording of a corrected claim.
     - Exclude contradicted findings unless a correction is available.
     - Include unverifiable findings only if they are important, and clearly
       mark them as unverified.
     - Where findings conflict, present both sides and note the conflict.
+
+    Citation rules:
+    - Every factual statement must end with its finding ID and a source
+      link, in the form (F3, [Source Title](source_url)).
+    - Use the finding's own source_title and source_url. Never rename a
+      source or attribute it to a different organisation.
+    - Do not write any factual statement that is not backed by a finding,
+      including general statements about opportunities or trends.
+    - If an objective has no usable findings, say "No verified findings
+      were found for this objective." instead of filling the gap.
 
     Include:
     - Executive summary.
@@ -103,8 +135,8 @@ report_writing_task:
     - Conclusion.
     - References listing every cited source URL.
 
-    Do not introduce claims that are not in the findings. Every factual
-    statement must be traceable to a cited source.
+    Do not introduce claims or background knowledge that are not in the
+    findings.
 
   expected_output: >
     A comprehensive, professionally structured Markdown research report

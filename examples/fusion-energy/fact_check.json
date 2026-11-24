@@ -1,0 +1,217 @@
+{
+  "checks": [
+    {
+      "finding_id": "F1",
+      "verdict": "partially_supported",
+      "confidence": 0.8,
+      "reasoning": "Independent sources confirm the main approaches to fusion are magnetic confinement and inertial confinement. Electrostatic fusion and hybrid systems are less commonly cited and not as widely recognized in current sources.",
+      "evidence_urls": [
+        "https://www.fusionindustryassociation.org/fusion-is-coming/",
+        "https://en.wikipedia.org/wiki/Fusion_power",
+        "https://belfercenter.org/research-analysis/notes-recent-hype-about-imminence-commercial-fusion-energy"
+      ],
+      "correction": "The common approaches for commercial nuclear fusion include magnetic confinement and inertial confinement. Electrostatic fusion and hybrid systems are less commonly recognized."
+    },
+    {
+      "finding_id": "F2",
+      "verdict": "supported",
+      "confidence": 0.9,
+      "reasoning": "Multiple sources indicate magnetic confinement fusion is currently the most heavily funded approach. Recent advancements in high-temperature superconducting magnets have solidified MCF's leading status in funding and research efforts.",
+      "evidence_urls": [
+        "https://usfusionenergy.org/approaches-fusion",
+        "https://www.heraeus.com/en/news-and-stories/magnetic-fusion/"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F3",
+      "verdict": "supported",
+      "confidence": 0.95,
+      "reasoning": "There is a clear consensus in the scientific community that the two main experimental approaches in fusion research are magnetic confinement and inertial confinement.",
+      "evidence_urls": [
+        "https://world-nuclear.org/information-library/current-and-future-generation/nuclear-fusion-power",
+        "https://understand-energy.stanford.edu/news/understand-fusion",
+        "https://usfusionenergy.org/approaches-fusion"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F4",
+      "verdict": "supported",
+      "confidence": 0.85,
+      "reasoning": "While some skepticism exists about the feasibility of Helion Energy's claims, they are indeed developing pulsed non-ignition fusion technology focused on deuterium and helium-3. This is credible based on their technical descriptions.",
+      "evidence_urls": [
+        "https://www.helionenergy.com/technology",
+        "https://www.helionenergy.com/blog/more-on-helions-pulsed-approach-to-fusion"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F5",
+      "verdict": "supported",
+      "confidence": 0.9,
+      "reasoning": "Commonwealth Fusion Systems has a well-documented project utilizing superconducting magnets, verified by independent sources.",
+      "evidence_urls": [
+        "https://cfs.energy/",
+        "https://sustainability.mit.edu/article/tests-show-high-temperature-superconducting-magnets-are-ready-fusion"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F6",
+      "verdict": "supported",
+      "confidence": 0.9,
+      "reasoning": "General Fusion's development of magnetized target fusion technology is verified and is a known approach they are pursuing.",
+      "evidence_urls": [
+        "https://generalfusion.com/our-fusion-technology/",
+        "https://www.gov.uk/government/news/ukaea-general-fusion-announce-magnetised-target-fusion-milestone"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F7",
+      "verdict": "supported",
+      "confidence": 0.85,
+      "reasoning": "Xcimer Energy's focus on excimer lasers for inertial fusion is supported by their roadmap and project descriptions.",
+      "evidence_urls": [
+        "https://xcimer.energy/",
+        "https://xcimer.energy/news/xcimer-publishes-roadmap-to-commercialize-laser-inertial-fusion/"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F8",
+      "verdict": "supported",
+      "confidence": 0.85,
+      "reasoning": "Independent sources confirm First Light Fusion's work on inertial fusion with a focus on driver technology using asymmetric implosion.",
+      "evidence_urls": [
+        "https://firstlightfusion.com/technology/",
+        "https://world-nuclear-news.org/articles/first-light-fusion-presents-novel-approach-to-fusion"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F9",
+      "verdict": "supported",
+      "confidence": 0.7,
+      "reasoning": "Helion Energy's timeline is publicly stated and the agreement with Microsoft adds credibility, though skepticism remains about the feasibility of meeting these timelines.",
+      "evidence_urls": [
+        "https://www.helionenergy.com/blog/announcing-helion-fusion-ppa-with-microsoft-constellation",
+        "https://www.reddit.com/r/fusion/comments/1spz4zx/fusion_startup_helion_stands_by_2028_timeline/"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F10",
+      "verdict": "supported",
+      "confidence": 0.9,
+      "reasoning": "Sources confirm ITER project's delays, particularly regarding first plasma operation.",
+      "evidence_urls": [
+        "https://www.world-nuclear-news.org/Articles/ITER-delays-revision-of-project-s-timeline",
+        "https://www.theregister.com/offbeat/2024/07/04/iter-delays-first-plasma-for-worlds-biggest-tokamak/"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F11",
+      "verdict": "supported",
+      "confidence": 0.9,
+      "reasoning": "The SPARC project by Commonwealth Fusion Systems is well-documented with expectations to achieve net energy generation by 2027.",
+      "evidence_urls": [
+        "https://cfs.energy/technology/sparc/",
+        "https://www.techjournal.uk/p/commonwealth-fusion-systems-targets"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F12",
+      "verdict": "supported",
+      "confidence": 0.85,
+      "reasoning": "The challenges associated with magnetic-confinement fusion using deuterium-tritium are well-documented in multiple sources.",
+      "evidence_urls": [
+        "https://acee.princeton.edu/distillates/fusion-energy-via-magnetic-confinement/",
+        "https://belfercenter.org/research-analysis/notes-recent-hype-about-imminence-commercial-fusion-energy"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F13",
+      "verdict": "supported",
+      "confidence": 0.85,
+      "reasoning": "Inertial-confinement fusion is indeed not close to practical power generation due to well-documented technical challenges.",
+      "evidence_urls": [
+        "https://www.belfercenter.org/research-analysis/notes-recent-hype-about-imminence-commercial-fusion-energy",
+        "https://world-nuclear.org/information-library/current-and-future-generation/nuclear-fusion-power"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F14",
+      "verdict": "supported",
+      "confidence": 0.9,
+      "reasoning": "MIT researchers have indeed developed a framework to evaluate fusion's economic viability.",
+      "evidence_urls": [
+        "https://news.mit.edu/2026/mit-researchers-tackle-economic-realities-fusion-power-0810",
+        "https://link.springer.com/article/10.1007/s10894-026-00577-9"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F15",
+      "verdict": "supported",
+      "confidence": 0.85,
+      "reasoning": "Technological advances in enabling technologies for fusion such as high-temperature superconductors and improved systems have been recorded, supporting the claim.",
+      "evidence_urls": [
+        "https://atap.lbl.gov/news/the-technologies-fueling-the-future-of-fusion/",
+        "https://today.ucsd.edu/story/making-the-case-for-fusion-energy"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F16",
+      "verdict": "supported",
+      "confidence": 0.8,
+      "reasoning": "There are acknowledged challenges such as supply chain issues and technological scaling difficulties that fusion power faces, which are reported across multiple credible sources.",
+      "evidence_urls": [
+        "https://kleinmanenergy.upenn.edu/research/publications/bringing-fusion-energy-to-the-grid-challenges-and-pathways/",
+        "https://www.world-nuclear-news.org/articles/fusion-supply-chain-spend-up-big-challenges-remain"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F17",
+      "verdict": "supported",
+      "confidence": 0.9,
+      "reasoning": "The potential of fusion to provide clean and nearly inexhaustible energy is widely acknowledged, though technical challenges remain unresolved.",
+      "evidence_urls": [
+        "https://www.mpg.de/25486262/focal-points-in-nuclear-fusion",
+        "https://world-nuclear.org/information-library/current-and-future-generation/nuclear-fusion-power"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F18",
+      "verdict": "supported",
+      "confidence": 0.8,
+      "reasoning": "Reports confirm the key challenges fusion faces in terms of engineering problems, supply chain uncertainties, and research support needs.",
+      "evidence_urls": [
+        "https://kleinmanenergy.upenn.edu/research/publications/bringing-fusion-energy-to-the-grid-challenges-and-pathways/",
+        "https://fusionindustryassociation.org/wp-content/uploads/2025/06/FIA-2025-Supply-Chain-Report.pdf"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F19",
+      "verdict": "supported",
+      "confidence": 0.85,
+      "reasoning": "Fusion energy's potential to provide baseload electricity without carbon emissions is well documented, affirming the claim.",
+      "evidence_urls": [
+        "https://kleinmanenergy.upenn.edu/research/publications/bringing-fusion-energy-to-the-grid-challenges-and-pathways/",
+        "https://www.iter.org/fusion-energy/advantages-fusion"
+      ],
+      "correction": null
+    }
+  ],
+  "contradictions": [],
+  "notes": ""
+}

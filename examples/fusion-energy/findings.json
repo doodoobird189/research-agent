@@ -1,0 +1,192 @@
+[
+  {
+    "id": "F1",
+    "claim": "Common fusion approaches for commercial nuclear fusion include magnetic confinement, inertial confinement, hybrid systems, and electrostatic fusion.",
+    "objective": "Identify the main technical approaches to achieving commercial nuclear fusion power.",
+    "details": "The Fusion Industry Association notes several approaches: Magnetic confinement involves heating plasma to very high temperatures and confining it with strong magnetic fields; Inertial confinement uses lasers to compress fuel pellets to fusion conditions momentarily; Hybrid systems combine aspects of both to improve confinement; Electrostatic fusion accelerates ions to fuse in a compact environment.",
+    "quote": "Common Fusion Approaches Magnetic confinement: Plasma is heated to 100 million \u00b0C or more, then squeezed and held in place by strong magnetic fields, allowing many fusion reactions to occur. (Example: tokamaks, stellarators)\nInertial confinement: Tiny fuel pellets are struck by powerful lasers. The outer layer explodes outward, compressing the core to fusion conditions for a few nanoseconds, producing a brief but intense pulse of energy from each pellet. (Example: National Ignition Facility)\nHybrid systems: Combine compression (e.g., from lasers, plasma pistons, or mechanical impact) with moderate magnetic fields to reduce energy losses and improve confinement.\nElectrostatic fusion: Uses high electric potentials to accelerate ions toward a central reaction zone, causing them to collide at high energies and fuse. The ions are guided and confined by electric fields rather than magnets, creating a compact environment for fusion reactions.",
+    "source_url": "https://www.fusionindustryassociation.org/fusion-is-coming/",
+    "source_title": "Fusion is Coming - Fusion Industry Association",
+    "published_date": null
+  },
+  {
+    "id": "F2",
+    "claim": "Magnetic confinement fusion (MCF) is the most well-funded fusion approach.",
+    "objective": "Identify the main technical approaches to achieving commercial nuclear fusion power.",
+    "details": "MCF works by magnetically compressing a plasma within a reactor. The common MCF reactor design is the toroidal-shaped tokamak, though other designs include stellarators and the field-reversed configuration. High-temperature superconducting magnets have increased the viability of MCF.",
+    "quote": "The best-funded approach to harness fusion energy is magnetic confinement fusion (MCF), which works by magnetically compressing a plasma within a reactor for a relatively long period of time. The most common MCF reactor design is the donut-shaped tokamak, but other designs like the stellarator and the field-reversed configuration also exist (ITER 2024; U.S. Department of Energy 2019, 24). The recent breakthroughs in high-temperature superconducting magnets have increased the viability of MCF.",
+    "source_url": "https://kleinmanenergy.upenn.edu/research/publications/bringing-fusion-energy-to-the-grid-challenges-and-pathways/",
+    "source_title": "Bringing Fusion Energy to the Grid: Challenges and Pathways - Kleinman Center for Energy Policy",
+    "published_date": "October 1, 2025"
+  },
+  {
+    "id": "F3",
+    "claim": "Two main experimental approaches in fusion research are magnetic confinement and inertial confinement.",
+    "objective": "Identify the main technical approaches to achieving commercial nuclear fusion power.",
+    "details": "Magnetic confinement uses strong magnetic fields to contain hot plasma, with prominent designs including tokamak and stellarator configurations. Inertial confinement compresses fuel pellets with strong lasers or particle beams. These two primary methodologies aim at achieving ignition, where the energy produced continuously surpasses the input energy.",
+    "quote": "At present, two main experimental approaches are being studied: magnetic confinement and inertial confinement. The first method uses strong magnetic fields to contain the hot plasma. The second involves compressing a small pellet containing fusion fuel to extremely high densities using strong lasers or particle beams.",
+    "source_url": "https://world-nuclear.org/information-library/current-and-future-generation/nuclear-fusion-power",
+    "source_title": "Nuclear Fusion Power - World Nuclear Association",
+    "published_date": "October 23, 2026"
+  },
+  {
+    "id": "F4",
+    "claim": "Helion Energy is developing a pulsed non-ignition fusion technology to produce fusion power using deuterium and helium-3.",
+    "objective": "List and describe the companies and projects leading each major technical approach to nuclear fusion.",
+    "details": "Helion Energy Inc., based in Everett, United States, was founded in 2013 and has received $1.7 billion in funding. It is ranked highly for its innovative approach to producing fusion power.",
+    "quote": "Helion Energy, Inc. is developing a pulsed non-ignition fusion technology to produce fusion power using deuterium and helium-3",
+    "source_url": "https://dealroom.co/lists/nuclear-fusion-startups/",
+    "source_title": "Top Nuclear fusion startups (50) | Dealroom.co",
+    "published_date": "2026-10-30"
+  },
+  {
+    "id": "F5",
+    "claim": "Commonwealth Fusion Systems is utilizing compact fusion power enabled by superconducting magnet technology.",
+    "objective": "List and describe the companies and projects leading each major technical approach to nuclear fusion.",
+    "details": "Located in Harvard, United States, Commonwealth Fusion Systems was founded in 2018 and has received $4.0 billion in funding. It's noted for its unique approach utilizing superconducting magnet technology.",
+    "quote": "Commonwealth Fusion Systems Unicorn Compact fusion power enabled by superconducting magnet technology",
+    "source_url": "https://dealroom.co/lists/nuclear-fusion-startups/",
+    "source_title": "Top Nuclear fusion startups (50) | Dealroom.co",
+    "published_date": "2026-10-30"
+  },
+  {
+    "id": "F6",
+    "claim": "General Fusion is one of the private companies exploring magnetized target fusion (MTF) to develop a commercial fusion power plant.",
+    "objective": "List and describe the companies and projects leading each major technical approach to nuclear fusion.",
+    "details": "General Fusion, based in Canada, utilizes a magnetized target fusion (MTF) approach. The company's aim involves injecting a compact toroid plasma into a liquid lead-lithium vortex chamber, then compressing it through synchronized pistons to achieve fusion conditions.",
+    "quote": "General Fusion \u00a0is one of a number of private efforts to develop a commercial fusion power plant.",
+    "source_url": "https://world-nuclear.org/information-library/current-and-future-generation/nuclear-fusion-power",
+    "source_title": "Nuclear Fusion Power - World Nuclear Association",
+    "published_date": "2026-10-23"
+  },
+  {
+    "id": "F7",
+    "claim": "Xcimer Energy focuses on inertial fusion power plant technology using excimer lasers.",
+    "objective": "List and describe the companies and projects leading each major technical approach to nuclear fusion.",
+    "details": "Based in the USA, Xcimer Energy uses krypton fluoride excimer lasers for high-energy laser-driven inertial fusion. They plan to conduct tests under the Milestone-Based Fusion Development Program with their Athena design.",
+    "quote": "Xcimer is developing laser-driven inertial fusion power plant technology based on high energy krypton fluoride excimer lasers.",
+    "source_url": "https://world-nuclear.org/information-library/current-and-future-generation/nuclear-fusion-power",
+    "source_title": "Nuclear Fusion Power - World Nuclear Association",
+    "published_date": "2026-10-23"
+  },
+  {
+    "id": "F8",
+    "claim": "First Light Fusion explores inertial fusion energy with a focus on driver technology using an asymmetric implosion approach.",
+    "objective": "List and describe the companies and projects leading each major technical approach to nuclear fusion.",
+    "details": "The UK-based company, First Light Fusion, is engaged in inertial fusion energy research focusing on power driver technology and asymmetric implosion techniques for energy generation and potential material processing and chemical manufacturing applications.",
+    "quote": "First Light Fusion in the UK is researching inertial fusion energy (IFE) with a focus on power driver technology using an asymmetric implosion approach.",
+    "source_url": "https://world-nuclear.org/information-library/current-and-future-generation/nuclear-fusion-power",
+    "source_title": "Nuclear Fusion Power - World Nuclear Association",
+    "published_date": "2026-10-23"
+  },
+  {
+    "id": "F9",
+    "claim": "Helion Energy aims to start up its nuclear fusion reactor in 2028 and reach full power by 2029 or 2030.",
+    "objective": "Evaluate the claimed timelines for each identified nuclear fusion project and assess their realism based on current scientific and technological progress.",
+    "details": "Helion Energy has signed a world-first agreement to supply fusion electricity to Microsoft and plans to start its Orion fusion power plant in Malaga, Washington in 2028. Full power is expected in 2029 or 2030. In September 2026, Helion was granted the necessary regulatory approvals for building and operating a fusion power plant.",
+    "quote": "In September 2026 Helion said it expected to start up the reactor in 2028 and would reach full power in 2029 or 2030.",
+    "source_url": "https://world-nuclear.org/information-library/current-and-future-generation/nuclear-fusion-power",
+    "source_title": "Nuclear Fusion Power - World Nuclear Association",
+    "published_date": "October 23, 2026"
+  },
+  {
+    "id": "F10",
+    "claim": "ITER's first plasma operation is now delayed and is expected to occur significantly later than the original 2025 target.",
+    "objective": "Evaluate the claimed timelines for each identified nuclear fusion project and assess their realism based on current scientific and technological progress.",
+    "details": "ITER has faced several technical challenges and delays including defects in thermal shields and vacuum vessel sectors, prompting revisions in its timeline. The revised timeline for first plasma operation is yet to be finalized but is expected to be substantially delayed due to these issues.",
+    "quote": "The current timeline for ITER is for first plasma in 2025 and the start of deuterium-tritium operation in 2035. But as previously reported by World Nuclear News last year, that timeline was set to be revised and then announced in the first half of 2023.",
+    "source_url": "https://www.world-nuclear-news.org/Articles/ITER-delays-revision-of-project-s-timeline",
+    "source_title": "ITER delays revision of project's timeline - World Nuclear News",
+    "published_date": "June 27, 2023"
+  },
+  {
+    "id": "F11",
+    "claim": "The SPARC project by Commonwealth Fusion Systems is set to demonstrate net energy generation by 2027.",
+    "objective": "Evaluate the claimed timelines for each identified nuclear fusion project and assess their realism based on current scientific and technological progress.",
+    "details": "SPARC is expected to become the world's first machine to produce more energy from fusion than it needs to power the process by 2027, achieving a net energy gain (Q>1). The project is being developed at a campus in Devens, Massachusetts, and it utilizes high-temperature superconducting magnets.",
+    "quote": "In 2027, it\u2019ll become the world\u2019s first commercially relevant fusion energy machine to produce more energy from fusion than it needs to power the process \u2014 a threshold called net energy generation or Q>1.",
+    "source_url": "https://cfs.energy/technology/sparc/",
+    "source_title": "SPARC: Proving commercial fusion energy is possible | Commonwealth Fusion Systems",
+    "published_date": "2026"
+  },
+  {
+    "id": "F12",
+    "claim": "Magnetic-confinement fusion using deuterium-tritium presents significant challenges due to neutron bombardment and tritium management.",
+    "objective": "Analyze the challenges and technological advancements needed in each fusion approach to reach a working power plant.",
+    "details": "The best performance to date using D-T in a tokamak realized a fusion-energy yield only about 33% of the 35 MW of thermal power injected, and achieving breakeven energy generation remains a challenge due to the need for frequent replacements of neutron-damaged components. Tritium is also almost nonexistent in nature and has to be bred in the reactor, complicating operations.",
+    "quote": "The first problem could require frequent replacement of structural components exposed to fusion neutrons (quite possibly so frequent as to make the whole operation uneconomic)...",
+    "source_url": "https://www.belfercenter.org/research-analysis/notes-recent-hype-about-imminence-commercial-fusion-energy",
+    "source_title": "Notes on the Recent Hype about Imminence of Commercial Fusion Energy | The Belfer Center for Science and International Affairs",
+    "published_date": "April 21, 2026"
+  },
+  {
+    "id": "F13",
+    "claim": "Inertial-confinement fusion is far from achieving practicality for power generation.",
+    "objective": "Analyze the challenges and technological advancements needed in each fusion approach to reach a working power plant.",
+    "details": "Challenges include the need for high repetition rates and low pellet costs. Current laser fusion facilities fire only a few shots per day, whereas a reactor would require roughly ten shots per second, and the cost of laser fuel pellets stands in the thousands of dollars each.",
+    "quote": "...the NIF is lucky if it can get off two shots per day. A practical laser fusion reactor would require something like ten shots per second.",
+    "source_url": "https://www.belfercenter.org/research-analysis/notes-recent-hype-about-imminence-commercial-fusion-energy",
+    "source_title": "Notes on the Recent Hype about Imminence of Commercial Fusion Energy | The Belfer Center for Science and International Affairs",
+    "published_date": "April 21, 2026"
+  },
+  {
+    "id": "F14",
+    "claim": "A framework is needed to evaluate the economic viability of fusion as a power source, addressing the translation of engineering requirements into economic impacts.",
+    "objective": "Analyze the challenges and technological advancements needed in each fusion approach to reach a working power plant.",
+    "details": "MIT researchers developed a framework considering physical and economic parameters to make fusion commercially viable, emphasizing factors like power density and component durability. The framework encourages understanding fusion's economics to determine feasibility in market terms.",
+    "quote": "The goal of the paper, Whyte says, is to create \u201cthis framework, where are all the economics are clear, and then we understand what it would mean\u201d for any fusion energy power plant.",
+    "source_url": "https://news.mit.edu/2026/mit-researchers-tackle-economic-realities-fusion-power-0810",
+    "source_title": "MIT researchers tackle the economic realities of fusion power | MIT News | Massachusetts Institute of Technology",
+    "published_date": "August 10, 2026"
+  },
+  {
+    "id": "F15",
+    "claim": "Recent years have seen important technological advances in enabling technologies for fusion.",
+    "objective": "Analyze the challenges and technological advancements needed in each fusion approach to reach a working power plant.",
+    "details": "Advancements include high-temperature superconducting magnets, improved laser systems, and AI for plasma control, which improve the practicality of maintaining plasma states needed for fusion reactions.",
+    "quote": "The rapid progress toward commercial fusion...has been made possible not just by fusion research itself, but by major advances in many enabling technologies over the past decade...",
+    "source_url": "https://www.fusionindustryassociation.org/fusion-is-coming/",
+    "source_title": "Fusion is Coming - Fusion Industry Association",
+    "published_date": null
+  },
+  {
+    "id": "F16",
+    "claim": "Despite breakthroughs, fusion energy faces significant engineering and supply chain challenges that could limit its viability.",
+    "objective": "Analyze the challenges and technological advancements needed in each fusion approach to reach a working power plant.",
+    "details": "Supply chain uncertainty and a relatively small academic research ecosystem are major challenges, along with the technological task of ensuring components can manage fusion conditions, such as neutron stress and plasma environment compatibility.",
+    "quote": "Despite increased private investment, fusion energy faces engineering problems, supply chain uncertainty, and a relatively small academic research ecosystem that could limit its economic viability.",
+    "source_url": "https://kleinmanenergy.upenn.edu/research/publications/bringing-fusion-energy-to-the-grid-challenges-and-pathways/",
+    "source_title": "Bringing Fusion Energy to the Grid: Challenges and Pathways - Kleinman Center for Energy Policy",
+    "published_date": "October 1, 2025"
+  },
+  {
+    "id": "F17",
+    "claim": "Nuclear fusion offers the promise of a clean and practically inexhaustible source of energy, but it also presents unresolved technical and economical challenges.",
+    "objective": "Compare the fusion approaches in terms of feasibility, scalability, and potential impact on global energy markets.",
+    "details": "The Max Planck Institute for Plasma Physics mentions the significant potential of nuclear fusion energy, highlighting its benefits such as the absence of long-lived radioactive waste compared to current energy sources. However, it notes that achieving a self-sustaining fusion reaction with a positive energy balance in power plants remains a major challenge. There are no current fusion reactors capable of producing more energy than consumed during the entire operation, which is critical for making fusion viable on a scale that can significantly impact global energy needs.",
+    "quote": "\"Nuclear fusion offers the enormous promise of practically unlimited energy, and clean energy at that \u2013 which is to say: it also wouldn\u2019t produce long-lived radioactive waste.\"",
+    "source_url": "https://www.mpg.de/25486262/focal-points-in-nuclear-fusion",
+    "source_title": "Comparison of nuclear fusion concepts | Max-Planck-Gesellschaft",
+    "published_date": "July 03, 2024"
+  },
+  {
+    "id": "F18",
+    "claim": "The feasibility of bringing fusion energy to the grid faces key challenges including engineering problems, supply chain uncertainties, and the need for strong academic research support.",
+    "objective": "Compare the fusion approaches in terms of feasibility, scalability, and potential impact on global energy markets.",
+    "details": "The Kleinman Center for Energy Policy outlines several barriers to the commercialization of fusion energy. These include significant engineering challenges, such as the production and management of tritium fuel, and the robustness of materials used in reactors. Additionally, supply chain issues and the small size of the current academic research ecosystem are highlighted as potential barriers to scaling fusion technology. The policy digest stresses the need for increased public-private cooperation, investment, and regulatory support to overcome these challenges.",
+    "quote": "\"Despite increased private investment, fusion energy faces engineering problems, supply chain uncertainty, and a relatively small academic research ecosystem that could limit its economic viability.\"",
+    "source_url": "https://kleinmanenergy.upenn.edu/research/publications/bringing-fusion-energy-to-the-grid-challenges-and-pathways/",
+    "source_title": "Bringing Fusion Energy to the Grid: Challenges and Pathways",
+    "published_date": "October 1, 2025"
+  },
+  {
+    "id": "F19",
+    "claim": "Fusion energy, if realized, can provide baseload electricity without operational carbon emissions and support rising energy demands.",
+    "objective": "Compare the fusion approaches in terms of feasibility, scalability, and potential impact on global energy markets.",
+    "details": "According to the Kleinman Center for Energy Policy, fusion could offer significant advantages over other forms of energy generation, primarily due to its lack of carbon emissions. Fusion is described as a viable alternative to intermittent renewable energy sources and conventional fossil fuels, potentially providing a reliable and environmentally friendly energy source that meets rising global demands. However, the document identifies critical technological hurdles that must be overcome in order for fusion to become a feasible component of the global energy market.",
+    "quote": "\"Fusion energy could provide baseload electricity without operational carbon emissions, support rising energy demands from artificial intelligence, and promote domestic energy security.\"",
+    "source_url": "https://kleinmanenergy.upenn.edu/research/publications/bringing-fusion-energy-to-the-grid-challenges-and-pathways/",
+    "source_title": "Bringing Fusion Energy to the Grid: Challenges and Pathways",
+    "published_date": "October 1, 2025"
+  }
+]

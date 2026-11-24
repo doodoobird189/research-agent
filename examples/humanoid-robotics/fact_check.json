@@ -1,0 +1,194 @@
+{
+  "checks": [
+    {
+      "finding_id": "F1",
+      "verdict": "partially_supported",
+      "confidence": 0.8,
+      "reasoning": "Tesla is a prominent player in the humanoid robotics sector with its Optimus robot. However, the claim of achieving an annual production capacity of 1 million humanoid robots appears unverified, as current production is reportedly in the early stages and capacities far below 1 million units are realistic in the short term. Tesla's AI and battery capabilities do provide competitive advantages, but the production capacity claim is more speculative.",
+      "evidence_urls": [
+        "https://en.wikipedia.org/wiki/Optimus_(robot)",
+        "https://www.tesla.com/SI",
+        "https://abc7.com/post/tesla-begins-production-optimus-humanoid-robot/19971232/"
+      ],
+      "correction": "Tesla is a leading company in humanoid robotics, notably through its Optimus robot. However, the claimed production capacity of 1 million units annually is yet to be realized as Tesla's current focus is on increasing production from early stages."
+    },
+    {
+      "finding_id": "F2",
+      "verdict": "supported",
+      "confidence": 0.9,
+      "reasoning": "Figure AI is recognized as a leading company in humanoid robotics with its Figure 03 robot, which has been successfully integrated into a BMW factory, enhancing real-world industrial operations.",
+      "evidence_urls": [
+        "https://www.figure.ai/news/f-03-at-bmw",
+        "https://newsroom.bmwgroup.com/global/bmw-group-advances-the-use-of-physical-ai-in-production-with-figure-03-project-in-spartanburg/"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F3",
+      "verdict": "supported",
+      "confidence": 1.0,
+      "reasoning": "Boston Dynamics is a well-known entity in the humanoid robotics market, with its Atlas robot having significant developments and industrial application announcements at CES 2026, confirming its influential role.",
+      "evidence_urls": [
+        "https://bostondynamics.com/products/atlas/",
+        "https://bostondynamics.com/blog/boston-dynamics-unveils-new-atlas-robot-to-revolutionize-industry/"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F4",
+      "verdict": "supported",
+      "confidence": 1.0,
+      "reasoning": "Agility Robotics' opening of RoboFab in Salem, Oregon, designed for mass production of the Digit robot, is well-documented by the company and other reports.",
+      "evidence_urls": [
+        "https://www.agilityrobotics.com/content/opening-robofab-worlds-first-factory-for-humanoid-robots",
+        "https://www.statesmanjournal.com/story/money/business/2023/09/19/agility-robotics-opening-robofab-humanoid-robot-digit-factory-salem-oregon/70900714007/"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F5",
+      "verdict": "supported",
+      "confidence": 0.85,
+      "reasoning": "PIA Group is involved in the integration of humanoid robotics into industrial environments, supporting adaptive learning and performance of complex tasks.",
+      "evidence_urls": [
+        "https://www.piagroup.com/en/automation/embodied-ai-humanoid-robotics/",
+        "https://www.assemblymag.com/articles/99984-pia-automation-launches-humanoid-robotics-unit-to-expand-industrial-automation-capabilities"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F6",
+      "verdict": "supported",
+      "confidence": 0.95,
+      "reasoning": "IDTechEx's projection about the sensor market in humanoid robots growing to over $6.59 billion by 2037 aligns with other independent analyses confirming significant growth.",
+      "evidence_urls": [
+        "https://www.assemblymag.com/articles/100319-humanoid-robot-sensor-market-could-reach-659-billion-by-2037",
+        "https://www.linkedin.com/pulse/us659b-market-opportunity-sensors-humanoid-robots-2037-idtechex-hxmqe"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F7",
+      "verdict": "supported",
+      "confidence": 0.9,
+      "reasoning": "The MIRO U robot by Midea Group is a recent development featuring energy-efficient and versatile capabilities for industrial tasks, as confirmed by several sources.",
+      "evidence_urls": [
+        "https://www.humanoidsdaily.com/news/midea-s-super-humanoid-miro-u-has-six-arms-and-wheels-challenges-1-1-human-mimicry",
+        "https://pr.ai/threads/miro-u-humanoid-robot-midea-group-beijiao-shunde-foshan-guangdong-china.27272/"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F8",
+      "verdict": "supported",
+      "confidence": 0.95,
+      "reasoning": "Humanoid robots are increasingly used in healthcare settings for various applications such as patient care and surgery assistance, and this growth trend is well documented.",
+      "evidence_urls": [
+        "https://www.grandviewresearch.com/industry-analysis/healthcare-companion-robots-market-report",
+        "https://blog.robozaps.com/b/humanoid-robots-in-healthcare"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F9",
+      "verdict": "supported",
+      "confidence": 0.9,
+      "reasoning": "Humanoid robots are indeed used in manufacturing for repetitive and physically simple tasks, aiming to improve efficiency and safety in human-centric environments.",
+      "evidence_urls": [
+        "https://metrology.news/the-rise-of-humanoid-robots-and-their-role-in-smart-factory-metrology/",
+        "https://sedonatec.com/feeds/blog/robots-factory"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F10",
+      "verdict": "supported",
+      "confidence": 0.85,
+      "reasoning": "Humanoid robots are being used in the service industry, including tasks such as inspections and maintenance in power plants, as acknowledged by multiple reports.",
+      "evidence_urls": [
+        "https://www.automate.org/robotics/news/the-impact-of-humanoid-robots-on-the-production-workforce",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12783740/"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F11",
+      "verdict": "supported",
+      "confidence": 0.9,
+      "reasoning": "As global labor shortages mount, humanoid robots are indeed considered a potential solution to maintain productivity, as corroborated by reports on labor shortages driving robot investment.",
+      "evidence_urls": [
+        "https://www.japantimes.co.jp/business/2026/05/29/tech/humanoids-summit-labor-shortages/",
+        "https://ifr.org/post/shortage-of-skilled-worker-is-one-driver-for-robotics"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F12",
+      "verdict": "supported",
+      "confidence": 0.85,
+      "reasoning": "China is indeed making significant strides in humanoid robot development, with reports indicating a push for large-scale robot deployments amid demographic changes.",
+      "evidence_urls": [
+        "https://www.foxnews.com/tech/humanoid-robots-hit-mass-production-china",
+        "https://internationalbanker.com/technology/china-makes-a-strong-push-for-humanoid-robot-market-dominance/"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F13",
+      "verdict": "supported",
+      "confidence": 0.9,
+      "reasoning": "2026 is indeed described as a validation year for humanoid robots, emphasizing the need for further testing and refinement before mainstream adoption.",
+      "evidence_urls": [
+        "https://blog.robozaps.com/b/future-of-humanoid-robots",
+        "https://www.idtechex.com/en/research-report/materials-for-humanoid-robots/1160"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F14",
+      "verdict": "supported",
+      "confidence": 0.9,
+      "reasoning": "There was a significant increase in investment in humanoid robotics during 2024 and 2025, with multiple reports confirming substantial investments in this sector.",
+      "evidence_urls": [
+        "https://www.plugandplaytechcenter.com/insights/humanoid-robot-market",
+        "https://www.forbes.com/sites/annatong/2025/12/31/2025-another-year-of-humanoid-hype/"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F15",
+      "verdict": "supported",
+      "confidence": 0.85,
+      "reasoning": "Safety concerns, among others, are recognized as significant barriers in the widespread adoption of humanoid robots, requiring advancement in safety standards and technology.",
+      "evidence_urls": [
+        "https://www.forbes.com/sites/johnkoetsier/2026/10/02/humanoid-robots-are-leaving-safety-cages-proving-actual-safety-is-harder/",
+        "https://sres.ai/robotics-and-physical-ai/beyond-standards-why-humanoid-robot-safety-requires-what-no-framework-has-codified-yet/"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F16",
+      "verdict": "supported",
+      "confidence": 0.9,
+      "reasoning": "The integration of humanoid robots presents unique legal challenges relating to liability and compliance, as robots become increasingly autonomous.",
+      "evidence_urls": [
+        "https://www.hilldickinson.com/our-view/articles/humanoid-robots-and-the-law-preparing-for-a-new-era-of-risk/",
+        "https://humanoid.guide/humanoid-robotics-consolidation-map/"
+      ],
+      "correction": null
+    },
+    {
+      "finding_id": "F17",
+      "verdict": "supported",
+      "confidence": 0.9,
+      "reasoning": "Ethical concerns, including privacy, emotional dependence, and bias, are well-recognized challenges in the deployment of humanoid robots.",
+      "evidence_urls": [
+        "https://www.hilldickinson.com/our-view/articles/humanoid-robots-and-the-law-preparing-for-a-new-era-of-risk/",
+        "https://www.sdsolutionsllc.com/humanoid-robots-under-threat-what-experts-are-saying-about-cyber-risks/"
+      ],
+      "correction": null
+    }
+  ],
+  "contradictions": [],
+  "notes": ""
+}

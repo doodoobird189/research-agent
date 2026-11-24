@@ -1,14 +1,13 @@
+import json
 from pathlib import Path
 
 import typer
 from dotenv import load_dotenv
 
-# Load API keys before importing the crew: the tools need them at import time.
+# Load API keys before importing the flow: the tools need them at import time.
 load_dotenv()
 
-from crewai.crews.crew_output import CrewOutput
-
-from research_agent.crews.research_crew import ResearchCrew
+from research_agent.flow import ResearchFlow
 
 app = typer.Typer(add_completion=False)
 
@@ -22,24 +21,26 @@ def research(
     """Research TOPIC and save the report and findings to reports/NAME/."""
     run_dir = output_dir / name
 
-    # Check before running the crew, so a taken name doesn't waste a whole run.
+    # Check before running the flow, so a taken name doesn't waste a whole run.
     if run_dir.exists():
         print(f"A report named '{name}' already exists. Choose a different name.")
         raise typer.Exit(code=1)
 
-    result = ResearchCrew().crew().kickoff(inputs={"topic": topic})
-
-    if not isinstance(result, CrewOutput):
-        raise TypeError("Expected CrewOutput; is streaming enabled on the crew?")
+    flow = ResearchFlow()
+    flow.kickoff(inputs={"topic": topic})
+    state = flow.state
 
     run_dir.mkdir(parents=True)
-
-    # tasks_output follows task order: planning, research, fact check, report
-    (run_dir / "report.md").write_text(result.raw)
-    (run_dir / "findings.json").write_text(result.tasks_output[1].raw)
-    (run_dir / "fact_check.json").write_text(result.tasks_output[2].raw)
+    (run_dir / "report.md").write_text(state.report)
+    (run_dir / "findings.json").write_text(to_json(state.findings))
+    (run_dir / "fact_check.json").write_text(state.fact_check.model_dump_json(indent=2))
+    (run_dir / "dead_links.json").write_text(to_json(state.dead_link_findings))
 
     print(f"Saved to {run_dir}")
+
+
+def to_json(findings: list) -> str:
+    return json.dumps([f.model_dump() for f in findings], indent=2)
 
 
 if __name__ == "__main__":

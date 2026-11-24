@@ -1,0 +1,142 @@
+[
+  {
+    "id": "F1",
+    "claim": "Solid-state batteries have the potential for higher energy density and could extend the range of electric vehicles.",
+    "objective": "Compare the energy density of solid-state batteries with current lithium-ion batteries for electric vehicles.",
+    "details": "According to Alex Bates, a Sandia postdoctoral researcher, solid-state batteries can offer higher energy density than lithium-ion batteries. This means electric vehicles could travel further between charges or require fewer batteries for grid-scale energy storage.",
+    "quote": "\u201cSolid-state batteries have the potential to be safer, and they have the potential for higher energy density,\u201d said Alex Bates, a Sandia postdoctoral researcher.",
+    "source_url": "https://energy.sandia.gov/news/safer-more-powerful-batteries-for-electric-cars-power-grid/",
+    "source_title": "Safer, more powerful batteries for electric cars, power grid \u2013 Energy",
+    "published_date": "March 15, 2022"
+  },
+  {
+    "id": "F2",
+    "claim": "Solid-state batteries can provide up to 40% higher energy density per weight compared to lithium-ion batteries.",
+    "objective": "Compare the energy density of solid-state batteries with current lithium-ion batteries for electric vehicles.",
+    "details": "A solid-state battery using a solid electrolyte and a lithium-metal anode can offer approximately 40% higher energy density per weight than a lithium-ion battery. This configuration supports better energy storage capabilities due to the materials used, such as replacing the graphite anode with lithium metal.",
+    "quote": null,
+    "source_url": "https://physicstoday.aip.org/features/solid-state-batteries-hype-hopes-and-hurdles",
+    "source_title": "Solid-state batteries: Hype, hopes, and hurdles - Physics Today",
+    "published_date": "November 10, 2025"
+  },
+  {
+    "id": "F3",
+    "claim": "Solid-state batteries demonstrate a potential to deliver two times the energy density compared to current lithium-ion batteries.",
+    "objective": "Compare the energy density of solid-state batteries with current lithium-ion batteries for electric vehicles.",
+    "details": "A study suggests that solid-state batteries could have more than double the energy density of lithium-ion counterparts. Implementations of solid-state technology are predicted to showcase significantly enhanced energy performance metrics as compared to existing lithium-ion batteries.",
+    "quote": null,
+    "source_url": "https://chainreaction.anl.gov/solid-state-battery-with-2x-energy-density-of-li-ion/",
+    "source_title": "Solid-state battery with 2x energy density of Li-ion",
+    "published_date": null
+  },
+  {
+    "id": "F4",
+    "claim": "Solid-state batteries significantly reduce fire risk compared to lithium-ion batteries due to non-flammable solid electrolytes.",
+    "objective": "Assess the safety features and concerns of solid-state batteries compared to lithium-ion batteries in the context of electric vehicles.",
+    "details": "Solid-state batteries, with their non-flammable solid electrolyte, significantly reduce fire risk and eliminate gas venting issues. They're also easier to control in terms of temperature.",
+    "quote": "\"The liquid electrolyte in lithium-ion batteries poses a risk of overheating and flammability, although the actual risks are often overstated. Solid-state batteries, with their non-flammable solid electrolyte, significantly reduce fire risk and eliminate gas venting issues.\"",
+    "source_url": "https://www.laserax.com/blog/solid-state-vs-lithium-ion-batteries",
+    "source_title": "Solid State Batteries Vs. Lithium-Ion: Which One is Better?",
+    "published_date": "October 28, 2024"
+  },
+  {
+    "id": "F5",
+    "claim": "Solid-state batteries face technical challenges such as crack formation in the electrolyte.",
+    "objective": "Assess the safety features and concerns of solid-state batteries compared to lithium-ion batteries in the context of electric vehicles.",
+    "details": "Solid-state batteries are still primarily confined to laboratories and small-scale prototypes. Challenges such as crack formation in the solid electrolyte during charging cycles can lead to increased internal resistance and reduced battery performance over time.",
+    "quote": "\"There are also several technical challenges that manufacturers are working hard to address: Crack Formation: One of the most significant issues is the formation of cracks in the solid electrolyte during charging cycles.\"",
+    "source_url": "https://www.laserax.com/blog/solid-state-vs-lithium-ion-batteries",
+    "source_title": "Solid State Batteries Vs. Lithium-Ion: Which One is Better?",
+    "published_date": "October 28, 2024"
+  },
+  {
+    "id": "F6",
+    "claim": "Solid-state batteries are significantly more expensive than lithium-ion batteries.",
+    "objective": "Analyze the cost differences between solid-state batteries and lithium-ion batteries for electric vehicles, considering both material and manufacturing expenses.",
+    "details": "Solid-state batteries cost between $300 and $500 per kilowatt-hour as compared to roughly $90 to $110 for high-nickel liquid lithium-ion cells and $70 to $90 for lithium iron phosphate (LFP) cells.",
+    "quote": "Pilot-scale solid-state cells cost an estimated $300\u2013500/kWh against roughly $90\u2013110/kWh for high-nickel liquid cells and $70\u201390/kWh for LFP.",
+    "source_url": "https://energy-solutions.co/articles/sub/solid-state-batteries-vs-lithium-ion-2026",
+    "source_title": "Solid-State vs Lithium-Ion Batteries 2026: 500 Wh/kg",
+    "published_date": "2026-08-11"
+  },
+  {
+    "id": "F7",
+    "claim": "Solid-state batteries present higher manufacturing costs due to advanced materials and complex processes.",
+    "objective": "Analyze the cost differences between solid-state batteries and lithium-ion batteries for electric vehicles, considering both material and manufacturing expenses.",
+    "details": "The higher cost of solid-state batteries is attributed to the complex manufacturing process and the use of advanced materials compared to lithium-ion batteries, which are cheaper and more readily available in the market.",
+    "quote": "The solid-state battery price is much more expensive as compared to lithium-ion cells. These batteries are made from advanced materials and have a complex manufacturing process.",
+    "source_url": "https://www.pretapower.com/solid-state-batteries-vs-lithium-ion-a-comprehensive-comparison/",
+    "source_title": "Solid-State Batteries vs Lithium-Ion: A Comprehensive Comparison",
+    "published_date": "2024-12-22"
+  },
+  {
+    "id": "F8",
+    "claim": "Manufacturing processes for solid-state batteries are more complex and expensive than those for lithium-ion batteries.",
+    "objective": "Analyze the cost differences between solid-state batteries and lithium-ion batteries for electric vehicles, considering both material and manufacturing expenses.",
+    "details": "Solid-state battery manufacturing involves sintering and thin-film deposition for electrolytes, requiring inert gas atmospheres, which are 5\u201310 times more complex and about 100 times stricter in atmospheric control compared to the liquid fill processes in lithium-ion battery manufacturing.",
+    "quote": "Electrolyte handling: Liquid fill (simple, fast) vs. Sintering / thin-film deposition (5\u201310x more complex) Atmosphere control: Dry room (<0.1% RH) vs. Inert gas (<1 ppm O\u2082/H\u2082O) for sulfides (~100x stricter)",
+    "source_url": "https://energy-solutions.co/articles/sub/solid-state-batteries-vs-lithium-ion-2026",
+    "source_title": "Solid-State vs Lithium-Ion Batteries 2026: 500 Wh/kg",
+    "published_date": "2026-08-11"
+  },
+  {
+    "id": "F9",
+    "claim": "Several hurdles remain before solid-state technologies can be deployed at an industrial scale.",
+    "objective": "Evaluate the manufacturability of solid-state batteries compared to lithium-ion batteries, including scalability and production challenges.",
+    "details": "These challenges include identifying solid electrolytes with sufficient ionic conductivity under ambient conditions, ensuring these electrolytes remain chemically stable across wide voltage windows, and developing design and operational strategies that mitigate mechanical stresses during cycling while preserving long-term performance.",
+    "quote": "\"Still, several hurdles remain before solid-state technologies can be deployed at industrial scale. Namely, these challenges include identifying solid electrolytes with sufficient ionic conductivity under ambient conditions, ensuring these electrolytes remain chemically stable across wide voltage windows, and developing design and operational strategies that mitigate mechanical stresses during cycling while preserving long-term performance.\"",
+    "source_url": "https://axial.acs.org/energy/solid-state-battery-advancements-challenges-and-industry-impacts",
+    "source_title": "Solid-State Battery Advancements, Challenges, and Industry Impacts",
+    "published_date": "Sep 4, 2025"
+  },
+  {
+    "id": "F10",
+    "claim": "Interfaces inside a solid-state battery are practical deployment complications.",
+    "objective": "Evaluate the manufacturability of solid-state batteries compared to lithium-ion batteries, including scalability and production challenges.",
+    "details": "Every junction has the potential to lose contact or degrade under the stresses of repeated charging and discharging. These instabilities can trigger cracks, shorts, or other failures, particularly when electrodes expand and contract with use.",
+    "quote": "\"Practical deployment, however, is complicated by the interfaces inside a solid-state battery. Every junction has the potential to lose contact or degrade under the stresses of repeated charging and discharging. These instabilities can trigger cracks, shorts, or other failures, particularly when electrodes expand and contract with use.\"",
+    "source_url": "https://axial.acs.org/energy/solid-state-battery-advancements-challenges-and-industry-impacts",
+    "source_title": "Solid-State Battery Advancements, Challenges, and Industry Impacts",
+    "published_date": "Sep 4, 2025"
+  },
+  {
+    "id": "F11",
+    "claim": "Researchers are using advanced real-time diagnostic tools to study and refine both materials and engineering strategies.",
+    "objective": "Evaluate the manufacturability of solid-state batteries compared to lithium-ion batteries, including scalability and production challenges.",
+    "details": "To address the issues with solid-state battery interfaces, researchers use advanced real-time diagnostic tools to study how dendrites form and voids appear, which help refine both materials and engineering strategies.",
+    "quote": "\"To address this, researchers are increasingly using advanced real-time diagnostic tools to study how dendrites form and how voids appear, insights that help refine both materials and engineering strategies.\"",
+    "source_url": "https://axial.acs.org/energy/solid-state-battery-advancements-challenges-and-industry-impacts",
+    "source_title": "Solid-State Battery Advancements, Challenges, and Industry Impacts",
+    "published_date": "Sep 4, 2025"
+  },
+  {
+    "id": "F12",
+    "claim": "ProLogium, Factorial Energy, QuantumScape, and Solid Power are closest to large-scale commercialization of solid-state batteries.",
+    "objective": "Identify and evaluate which companies are closest to commercializing solid-state batteries for electric vehicles, including their technological advancements and commercial readiness.",
+    "details": "ProLogium has established manufacturing capacity with its Taoke factory, claiming mass production of Gen 3.5 all-solid-state batteries since September 2026. Factorial Energy has integrated its batteries into vehicles by companies like Mercedes-Benz and Stellantis, and received initial commercial orders. QuantumScape's production is based on its automated Eagle Line, with a potential large-scale partnership with Volkswagen\u2019s PowerCo. Solid Power, apart from developing batteries, focuses on producing electrolyte for others. Each company is at a different stage of scalability and commercial readiness.",
+    "quote": "ProLogium, Factorial Energy, QuantumScape and Solid Power are currently the four strongest candidates for large-scale commercialization.",
+    "source_url": "https://newmarketpitch.com/blogs/news/solid-state-battery-top-startups",
+    "source_title": "Which top solid-state battery startups will mass-produce? \u2013 New Market Pitch",
+    "published_date": "2026-10-16"
+  },
+  {
+    "id": "F13",
+    "claim": "Toyota aims for all-solid-state battery commercialization by 2027-2028.",
+    "objective": "Identify and evaluate which companies are closest to commercializing solid-state batteries for electric vehicles, including their technological advancements and commercial readiness.",
+    "details": "Toyota is developing all-solid-state battery technology focusing on sulfide solid electrolytes in collaboration with Idemitsu. Their development targets include fast charging and significantly increased range compared to current technologies. These efforts place Toyota in direct competition with startups like ProLogium, Factorial, QuantumScape, and others also pursuing commercial scale.",
+    "quote": "Toyota remains a formidable competitor, targeting all-solid-state battery commercialization around 2027\u20132028 with Idemitsu.",
+    "source_url": "https://www.econmarketresearch.com/blog/top-companies-in-the-solid-state-battery-industry",
+    "source_title": "Top Solid-State Battery Companies Advancing Next-Gen Energy Storage in 2026",
+    "published_date": "2026-08-15"
+  },
+  {
+    "id": "F14",
+    "claim": "Honda is developing all-solid-state battery technology aimed at mass-production.",
+    "objective": "Identify and evaluate which companies are closest to commercializing solid-state batteries for electric vehicles, including their technological advancements and commercial readiness.",
+    "details": "Honda is working independently on all-solid-state batteries with an eye toward mass-production. Their current focus includes optimizing battery design for vehicle integration, improving materials, and creating manufacturing processes that allow for cost-effective production. Honda plans to operationalize their demonstration line in 2024 to start establishing mass-production techniques.",
+    "quote": "Honda is working independently on the development of all-solid-state batteries... developing all-solid-state battery technology with an eye toward mass-production, which will enable us to install them to our vehicles...",
+    "source_url": "https://global.honda/en/tech/All-solid-state_battery_technology/",
+    "source_title": "All-solid-state battery technology\uff5cHonda Technology\uff5cHonda",
+    "published_date": null
+  }
+]
