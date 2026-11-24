@@ -138,6 +138,12 @@ report_writing_task:
     Do not introduce claims or background knowledge that are not in the
     findings.
 
+    Output format: your answer is saved directly as a .md file. Start
+    immediately with the report's "# " title and output raw Markdown only.
+    Do not wrap the report in a code block (no ``` or ```markdown fences)
+    and do not add any text before or after the report.
+
   expected_output: >
     A comprehensive, professionally structured Markdown research report
-    with inline citations and a references section with source URLs.
+    with inline citations and a references section with source URLs,
+    starting with a "# " title line and not wrapped in a code block.

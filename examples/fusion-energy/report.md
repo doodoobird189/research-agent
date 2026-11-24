@@ -1,4 +1,3 @@
-```markdown
 # Technical Approaches to Commercial Nuclear Fusion Power
 
 ## Executive Summary
@@ -59,4 +58,3 @@ While nuclear fusion offers a tantalizing potential for clean and infinite energ
 - [ITER delays revision of project's timeline - World Nuclear News](https://www.world-nuclear-news.org/Articles/ITER-delays-revision-of-project-s-timeline)
 - [Notes on the Recent Hype about Imminence of Commercial Fusion Energy | The Belfer Center for Science and International Affairs](https://belfercenter.org/research-analysis/notes-recent-hype-about-imminence-commercial-fusion-energy)
 - [MIT researchers tackle the economic realities of fusion power | MIT News | Massachusetts Institute of Technology](https://news.mit.edu/2026/mit-researchers-tackle-economic-realities-fusion-power-0810)
-```
