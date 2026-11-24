@@ -49,12 +49,12 @@ flowchart LR
     S -.-> F
 ```
 
-| Agent | What it does | Tools | Output |
-|---|---|---|---|
-| **Research Planner** | Breaks the question into distinct, searchable objectives | — | `ResearchPlan` |
-| **Researcher** | Collects evidence for each objective, one fact per finding, with source, quote and date | Serper search, web scraper | `ResearchFindings` |
-| **Fact Checker** | Checks every finding against *independent* sources and flags contradictions between findings | Serper search, web scraper | `FactCheckReport` |
-| **Report Writer** | Turns the verified findings into a cited Markdown report | — | `report.md` |
+| Agent                | What it does                                                                                 | Tools                      | Output             |
+| -------------------- | -------------------------------------------------------------------------------------------- | -------------------------- | ------------------ |
+| **Research Planner** | Breaks the question into distinct, searchable objectives                                     | —                          | `ResearchPlan`     |
+| **Researcher**       | Collects evidence for each objective, one fact per finding, with source, quote and date      | Serper search, web scraper | `ResearchFindings` |
+| **Fact Checker**     | Checks every finding against _independent_ sources and flags contradictions between findings | Serper search, web scraper | `FactCheckReport`  |
+| **Report Writer**    | Turns the verified findings into a cited Markdown report                                     | —                          | `report.md`        |
 
 ### The data contracts
 
@@ -157,7 +157,7 @@ Report names must be unique. If the name is already taken, the run stops before 
 
 ## Example output
 
-> **Question:** *"What is Retrieval Augmented Generation and who are the main vendors?"*
+> **Question:** _"What is Retrieval Augmented Generation and who are the main vendors?"_
 
 Excerpt from the generated report ([full report](examples/rag_report.md)):
 
@@ -212,4 +212,4 @@ research-agent/
 
 ## Tech stack
 
-[CrewAI](https://github.com/crewAIInc/crewAI) · [Pydantic](https://docs.pydantic.dev/) · [Serper](https://serper.dev/) · OpenAI · [Typer](https://typer.tiangolo.com/) · [uv](https://docs.astral.sh/uv/) · [Ruff](https://docs.astral.sh/ruff/)
+[CrewAI](https://github.com/crewAIInc/crewAI) · [Pydantic](https://docs.pydantic.dev/) · [Serper](https://serper.dev/) · [OpenAI](https://openai.com/) · [Typer](https://typer.tiangolo.com/) · [uv](https://docs.astral.sh/uv/) · [Ruff](https://docs.astral.sh/ruff/)
