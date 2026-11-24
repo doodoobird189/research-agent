@@ -128,32 +128,28 @@ cp .env.example .env
 
 # 3. Run
 uv run research-agent "What is Retrieval Augmented Generation and who are the main vendors?"
+# you'll be asked for a report name, e.g. "rag"
 ```
 
 ### Usage
 
-```text
-research-agent [OPTIONS] TOPIC
-
-Arguments:
-  TOPIC                  The research question to investigate  [required]
-
-Options:
-  -d, --output-dir PATH  Parent folder for auto-named run folders  [default: reports]
-  -o, --output PATH      Exact folder for this run, instead of an auto-generated name
-  --help                 Show this message and exit
+```bash
+uv run research-agent "What is RAG?"                       # asks for a report name
+uv run research-agent "What is RAG?" --name rag            # name given up front
+uv run research-agent "What is RAG?" --name rag --output-dir my_reports
+uv run research-agent --help
 ```
 
-Each run gets its own folder, named with a timestamp and a short version of the question:
+Each run is saved to its own folder, named after the report:
 
 ```
-reports/2026-11-23_1432_what-is-retrieval-augmented-generation-and-who/
+reports/rag/
 ├── report.md         # the final cited report
 ├── findings.json     # every finding from the researcher (ResearchFindings)
 └── fact_check.json   # every verdict from the fact checker (FactCheckReport)
 ```
 
-The timestamp keeps runs in order, and running the same question twice never overwrites an earlier run. Keeping the structured findings and verdicts next to the report lets you trace any statement back to its evidence, and gives future evaluations data to work with.
+Report names must be unique. If the name is already taken, the run stops before any research starts, so no API calls are wasted. Keeping the structured findings and verdicts next to the report lets you trace any statement back to its evidence, and gives future evaluations data to work with.
 
 > **Note:** each run makes many LLM calls and web searches. Start with a narrow question to keep cost and runtime down.
 
